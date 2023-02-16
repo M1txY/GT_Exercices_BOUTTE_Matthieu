@@ -54,7 +54,7 @@ nav ul::after{
     content: "";
     display: table;
     clear: both;
-    transition: 1s;
+    
 }
 
 nav a{
@@ -64,6 +64,7 @@ nav a{
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
     transition: 0.3s;
+    white-space : nowrap;
 }
 
 nav a:hover{
@@ -101,5 +102,4 @@ nav > ul li:hover .sous{
 .deroulant > a::after{
     content:" ▼";
     font-size: 12px;
-    transition: 1s;
 }
