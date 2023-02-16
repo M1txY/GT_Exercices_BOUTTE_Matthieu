@@ -1,0 +1,88 @@
+footer {
+    background-color: #141414;
+    color: #d8d8d8;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.company-info {
+    flex: 2;
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-links, .support-links {
+    flex: 1;
+    padding: 0 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.social-links a, .support-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+.social-links a:hover, .support-links a:hover {
+    text-decoration: underline;
+}
+
+.social-links i, .support-links i {
+    margin-right: 10px;
+}
+
+.social-links i {
+    color: #d8d8d8;
+}
+
+.social-links i:hover {
+    color: #1DB954;
+}
+
+.support-links li {
+    list-style-type: none;
+}
+
+.support-links li a {
+    display: block;
+    margin-bottom: 10px;
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+.support-links li a:hover {
+    text-decoration: underline;
+}
+
+.support-links h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
