@@ -1,0 +1,353 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+*{
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header{
+    height: 100px;
+    height: 6.25rem;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+}
+
+.logo:hover{
+    filter:brightness(0.5);
+}
+
+nav{
+    width: 50%;
+    margin-right: 3% ;
+    background-color: transparent;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    transition: 0.3s;
+    white-space : nowrap;
+}
+
+nav a:hover{
+    color: #ff0000;
+    border-bottom: 2px solid #d30000;
+    transition: 0.3s;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+}
+nav > ul li:hover .sous{
+    display: block;
+    transition: 1s;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+    transition: 0.3s;
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+
+
+
+
+.sous2 li  {
+    display: none;
+}
+
+.deroulant2:hover .sous2 li {
+    display: block;
+}
+
+.deroulant2 > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.sous2 a{
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous2 a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+    transition: 0.3s;
+}
+
+.sous2{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+nav > ul li:hover .sous2{
+    display: block;
+    transition: 1s;
+    left: 150px;
+    top: 0px
+}
+
+.sous2 li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+/* section banner */
+
+.banner img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container-movie {
+    position: absolute;
+    top: 50%;
+    left: 1000px;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-movie h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    opacity: none;
+    
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #d30000;
+    transition: 0.3s;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+    color:white;
+}
+
+.rowcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width: 768px) {
+    .card p{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    .banner-none{
+        display: none;
+    }
+    
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #141414;
+    color: #d8d8d8;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.company-info {
+    flex: 2;
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-links, .support-links {
+    flex: 1;
+    padding: 0 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.social-links a, .support-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+.social-links a:hover, .support-links a:hover {
+    text-decoration: underline;
+}
+
+.social-links i, .support-links i {
+    margin-right: 10px;
+}
+
+.social-links i {
+    color: #d8d8d8;
+}
+
+.social-links i:hover {
+    color: #1DB954;
+}
+
+.support-links li {
+    list-style-type: none;
+}
+
+.support-links li a {
+    display: block;
+    margin-bottom: 10px;
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+.support-links li a:hover {
+    text-decoration: underline;
+}
+
+.support-links h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
