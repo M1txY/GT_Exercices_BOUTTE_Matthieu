@@ -1,0 +1,193 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+*{
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header{
+    height: 100px;
+    height: 6.25rem;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+
+    
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+}
+
+.logo:hover{
+    filter:brightness(0.5);
+}
+
+nav{
+    width: 50%;
+    margin-right: 3% ;
+    background-color: transparent;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    transition: 0.3s;
+    white-space : nowrap;
+}
+
+nav a:hover{
+    color: #ff0000;
+    border-bottom: 2px solid #d30000;
+    transition: 0.3s;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+}
+nav > ul li:hover .sous{
+    display: block;
+    transition: 1s;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+    transition: 0.3s;
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+
+
+
+
+.sous2 li  {
+    display: none;
+}
+
+.deroulant2:hover .sous2 li {
+    display: block;
+}
+
+.deroulant2 > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.sous2 a{
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous2 a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+    transition: 0.3s;
+}
+
+.sous2{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+nav > ul li:hover .sous2{
+    display: block;
+    transition: 1s;
+    left: 150px;
+    top: 0px
+}
+
+.sous2 li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.banner{
+    height: 100vh;
+    background-image: url(img/KIRIKOU.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    opacity: 0.8;
+}
+
+iframe{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
